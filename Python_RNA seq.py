@@ -24,6 +24,7 @@ data.loc[data ["padj"]<= 0.05]
 L2F=p_f.loc[(-2 <= p_f["log2FoldChange"]) & (p_f["log2FoldChange"] <=2)]
 #filtered data by setting the range for log2foldchange between -2 and +2
 print(L2F.shape)
+
 rawdf1=data[["log2FoldChange", "padj", "external_gene_name"]]
 #Select the column with the strings for scatter plot
 rawdf1
@@ -35,3 +36,7 @@ filtereddf1=L2F[["log2FoldChange", "padj", "external_gene_name"]]
 filtereddf1
 filtereddf1.plot.scatter("log2FoldChange", "padj")
 #scatter plot was made with filtered data L2F against log2FoldChange on x axis and padj on y axis
+#for print the gen names in filtereddf1 variable
+df=filtereddf1["external_gene_name"].astype(str)
+for x in df:
+    print (x)
