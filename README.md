@@ -1,1 +1,1 @@
-# RNA_seq
+Data Processing of RNA seq data
