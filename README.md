@@ -1,6 +1,5 @@
 Data Processing of RNA seq data
-
-# import Pandas for the script
+# import Pandas 
 
 #The data was processed to find the differential expression of genes among the groups (disease vs control) by using the filter for padjusted with less than and equal to 0.05
 
